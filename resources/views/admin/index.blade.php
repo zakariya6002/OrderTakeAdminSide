@@ -11,7 +11,7 @@
 											<!--begin::Wrapper-->
 											<div class="d-flex flex-column flex-grow-1">
 												<!--begin::Title-->
-												<a href="{{route('orders')}}" class="text-dark text-hover-primary fw-bolder fs-3 text-center mt-10 font-weight-bolder">Orders</a>
+												<a href="{{route('orders.index')}}" class="text-dark text-hover-primary fw-bolder fs-3 text-center mt-10 font-weight-bolder">Orders</a>
 												<!--end::Title-->
 											</div>
 											<!--end::Wrapper-->

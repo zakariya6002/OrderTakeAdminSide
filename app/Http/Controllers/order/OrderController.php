@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\customer;
+namespace App\Http\Controllers\order;
 
-use App\Models\User;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
-class CustomerController extends Controller
+class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,7 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        $cus = User::all();
-        return view('admin.customer.index', compact('cus'));
+        return view('admin.order.index');
     }
 
     /**

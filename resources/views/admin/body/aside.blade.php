@@ -49,7 +49,7 @@
 					</a>
 				</div>
 				<div class="menu-item">
-					<a class="menu-link" href="{{route('customerIndex')}}">
+					<a class="menu-link" href="{{route('customers.index')}}">
 						<span class="menu-icon">
 							<!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
 							<span class="svg-icon svg-icon-2">
@@ -64,7 +64,7 @@
 					</a>
 				</div>
 				<div class="menu-item">
-					<a class="menu-link" href="{{route('cat')}}">
+					<a class="menu-link" href="{{route('category.index')}}">
 						<span class="menu-icon">
 							<!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
 							<span class="svg-icon svg-icon-2">
@@ -80,7 +80,7 @@
 					</a>
 				</div>
 				<div class="menu-item">
-					<a class="menu-link" href="{{route('prod')}}">
+					<a class="menu-link" href="{{route('products.index')}}">
 						<span class="menu-icon">
 							<!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
 							<span class="svg-icon svg-icon-2">
