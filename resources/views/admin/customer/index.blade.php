@@ -71,8 +71,9 @@
 											<!--end::Table head-->
 											<!--begin::Table body-->
 											<tbody class="fw-bold text-gray-600">
+											@foreach($cus as $c)
 												<tr>
-													@foreach($cus as $c)
+													
 													<!--begin::Checkbox-->
 													<td>
 														<div class="form-check form-check-sm form-check-custom form-check-solid">
@@ -125,8 +126,9 @@
 														<!--end::Menu-->
 													</td>
 													<!--end::Action=-->
-													@endforeach
+													
 												</tr>
+												@endforeach
 											</tbody>
 											<!--end::Table body-->
 										</table>

@@ -26,7 +26,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.category.backend.create');
     }
 
     /**
@@ -37,7 +37,10 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Category::create([
+            'name' => $request->name,
+        ]);
+        return redirect()->route('category.index');
     }
 
     /**
@@ -59,7 +62,9 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $cat = Category::find($id);
+
+        return view('admin.category.backend.edit',compact('cat'));
     }
 
     /**
@@ -71,7 +76,11 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $cat = Category::find($id);
+        $cat->update([
+            'name'=> $request->name,
+        ]);
+        return redirect()->route('category.index');
     }
 
     /**
@@ -82,6 +91,8 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $cat = Category::find($id);
+        $cat->delete();
+        return redirect()->route('category.index');
     }
 }
