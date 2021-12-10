@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\customer\CustomerController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\category\CategoryController;
+use App\Http\Controllers\customer\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::get('order/orders',[CustomerController::class,'orders'])->name('orders');
 Route::get('/customers',[CustomerController::class,'index'])->name('customerIndex');
+Route::get('/products',[CategoryController::class,'index'])->name('cat');
+
+
