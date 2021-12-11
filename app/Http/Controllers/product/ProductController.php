@@ -28,7 +28,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        $cat = Category::all();
+        return view('admin.product.backend.create', compact('cat'));
     }
 
     /**
@@ -39,7 +40,16 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Product::create([
+            'product_name'=>$request->product_name,
+            'product_sku'=>$request->product_sku,
+            'product_description'=>$request->product_description,
+            'product_price'=>$request->product_price,
+            'category_id'=>$request->category_id,
+            'product_feature_image'=>$request->product_feature_image
+
+        ]);
+        return redirect()->route('products.index');
     }
 
     /**
@@ -61,7 +71,8 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $prod = Product::find($id);
+        return view('admin.product.backend.edit',compact('prod'));
     }
 
     /**
@@ -73,7 +84,15 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $prod = Product::find($id);
+        $prod -> update([
+            'product_name'=>$request->product_name,
+            'product_sku'=>$request->product_sku,
+            'product_description'=>$request->product_description,
+            'product_price'=>$request->product_price,
+            'category_id'=>$request->category_id,
+            'product_feature_image'=>$request->product_feature_image
+        ]);
     }
 
     /**
@@ -84,6 +103,8 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $prod = Product::find($id);
+        $prod ->delete();
+        return redirect()->route('products.index');
     }
 }
