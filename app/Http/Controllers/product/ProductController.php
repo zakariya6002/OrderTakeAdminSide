@@ -71,8 +71,9 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
+        $cat = Category::all();
         $prod = Product::find($id);
-        return view('admin.product.backend.edit',compact('prod'));
+        return view('admin.product.backend.edit',compact('prod','cat'));
     }
 
     /**
@@ -93,6 +94,7 @@ class ProductController extends Controller
             'category_id'=>$request->category_id,
             'product_feature_image'=>$request->product_feature_image
         ]);
+        return redirect()->route('products.index');
     }
 
     /**

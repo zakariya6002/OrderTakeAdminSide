@@ -26,7 +26,8 @@ class CustomerController extends Controller
      */
     public function create()
     {
-        //
+        $cus = User::all();
+        return view('admin.customer.backend.create', compact('cus'));
     }
 
     /**

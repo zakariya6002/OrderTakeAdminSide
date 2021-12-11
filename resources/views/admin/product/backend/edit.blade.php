@@ -28,7 +28,7 @@
                                     <label class="fs-6 fw-bold mb-2">SKU</label>
                                     <!--end::Label-->
                                     <!--begin::Input-->
-                                    <input type="text" class="form-control form-control-solid" placeholder="" name="name" value="{{$prod->product_sku}}" />
+                                    <input type="text" class="form-control form-control-solid" placeholder="" name="product_sku" value="{{$prod->product_sku}}" />
                                     <!--end::Input-->
                                 </div>
                                 <!--end::Input group-->
@@ -38,7 +38,7 @@
                                     <label class="required fs-6 fw-bold mb-2">Product Name</label>
                                     <!--end::Label-->
                                     <!--begin::Input-->
-                                    <input type="text" class="form-control form-control-solid" placeholder="" name="name" value="{{$prod->product_name}}" />
+                                    <input type="text" class="form-control form-control-solid" placeholder="" name="product_name" value="{{$prod->product_name}}" />
                                     <!--end::Input-->
                                 </div>
                                 <!--end::Input group-->
@@ -47,25 +47,25 @@
                                     <label class="required fs-6 fw-bold mb-2">Price</label>
                                     <!--end::Label-->
                                     <!--begin::Input-->
-                                    <input type="text" class="form-control form-control-solid" placeholder="" name="name" value="{{$prod->product_price}}" />
+                                    <input type="text" class="form-control form-control-solid" placeholder="" name="product_price" value="{{$prod->product_price}}" />
                                     <!--end::Input-->
                                 </div>
                                 <!--end::Input group-->
                                 <div class="fv-row mb-7">
                                     <!--begin::Label-->
                                     <label class="required fs-6 fw-bold mb-2">Category</label>
-                                    <!--end::Label-->
-                                    <!--begin::Input-->
-                                    <input type="text" class="form-control form-control-solid" placeholder="" name="name" value="{{$prod->product_category}}" />
-                                    <!--end::Input-->
+                                    <select class="form-control form-control-solid" name="category_id">
+                                        @foreach($cat as $c)
+                                        <option value="{{$c->id}}">{{ $c->name}}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                                 <!--end::Input group-->
                                 <div class="fv-row mb-7">
                                     <!--begin::Label-->
-                                    <label class="fs-6 fw-bold mb-2">Description</label>
                                     <!--end::Label-->
                                     <!--begin::Input-->
-                                    <input type="text" class="form-control form-control-solid" placeholder="" name="description" value="{{$prod->product_description}}" />
+                                    <textarea placeholder="Description" value="{{$prod->product_description}}" class="form-control form-control-solid" name="product_description"></textarea>
                                     <!--end::Input-->
                                 </div>
                                 <!--end::Input group-->
@@ -74,7 +74,7 @@
                                     <label class="fs-6 fw-bold mb-2">Picture</label>
                                     <!--end::Label-->
                                     <!--begin::Input-->
-                                    <input type="text" class="form-control form-control-solid" placeholder="" name="name" value="{{$prod->product_feature_image}}" />
+                                    <input type="file" class="form-control form-control-solid" placeholder="" name="product_feature_image" value="" />
                                     <!--end::Input-->
                                 </div>
                                 <!--end::Input group-->
@@ -89,7 +89,7 @@
                             <button type="reset" id="kt_modal_add_customer_cancel" class="btn btn-light me-3">Discard</button>
                             <!--end::Button-->
                             <!--begin::Button-->
-                            <button type="submit" id="kt_modal_add_customer_submit" class="btn btn-primary">
+                            <button type="submit" class="btn btn-primary">
                                 <span class="indicator-label">Submit</span>
                                 <span class="indicator-progress">Please wait...
                                     <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
