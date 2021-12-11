@@ -95,7 +95,7 @@
 													<td>{{$c->compay_name}}</td>
 													<!--end::Company=-->
 													<!--begin::Payment method=-->
-													<td>0824040882</td>
+													<td>{{$c->phone}}</td>
 													<!--end::Payment method=-->
 													<!--begin::Date=-->
 													<td>{{$c->created_at}}</td>
@@ -114,7 +114,7 @@
 														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4" data-kt-menu="true">
 															<!--begin::Menu item-->
 															<div class="menu-item px-3">
-																<a href="../../demo1/dist/apps/customers/view.html" class="menu-link px-3">View</a>
+																<a href="#" class="menu-link px-3">View</a>
 															</div>
 															<!--end::Menu item-->
 															<!--begin::Menu item-->
