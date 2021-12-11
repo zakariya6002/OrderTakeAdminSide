@@ -92,10 +92,10 @@
 													</td>
 													<!--end::Email=-->
 													<!--begin::Company=-->
-													<td>{{$c->compay_name}}</td>
+													<td>{{$c->company_name}}</td>
 													<!--end::Company=-->
 													<!--begin::Payment method=-->
-													<td>0824040882</td>
+													<td>{{$c->phone}}</td>
 													<!--end::Payment method=-->
 													<!--begin::Date=-->
 													<td>{{$c->created_at}}</td>
