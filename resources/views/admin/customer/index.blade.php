@@ -95,7 +95,7 @@
 													<td>{{$c->compay_name}}</td>
 													<!--end::Company=-->
 													<!--begin::Payment method=-->
-													<td>{{$c->phone}}</td>
+													<td>0824040882</td>
 													<!--end::Payment method=-->
 													<!--begin::Date=-->
 													<td>{{$c->created_at}}</td>
