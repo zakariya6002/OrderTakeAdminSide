@@ -13,7 +13,7 @@ License: For each use you must have a valid license purchased only from above li
 <html lang="en">
 	<!--begin::Head-->
 	<head><base href="../../../">
-		<title>Concore</title>
+		<title>DarioPro</title>
 		<meta name="description" content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue &amp; Laravel versions. Grab your copy now and get life-time updates for free." />
 		<meta name="keywords" content="Metronic, bootstrap, bootstrap 5, Angular, VueJs, React, Laravel, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -44,7 +44,7 @@ License: For each use you must have a valid license purchased only from above li
 				<div class="d-flex flex-center flex-column flex-column-fluid p-10 pb-lg-20">
 					<!--begin::Logo-->
 					<a href="../../demo7/dist/index.html" class="mb-12">
-						<img alt="Logo" src="{{asset('backend/media/logos/logo2.png')}}" class="h-40px" />
+						<img alt="Logo" src="{{asset('backend/media/logos/logo.png')}}" class="h-80px" />
 					</a>
 					<!--end::Logo-->
 					<!--begin::Wrapper-->
@@ -75,11 +75,6 @@ License: For each use you must have a valid license purchased only from above li
 							</div>
 							<!--end::Separator-->
 							<!--begin::Input group-->
-							<div class="fv-row mb-7">
-								<!--begin::Col-->
-									<label class="form-label fw-bolder text-dark fs-6">Comapny Name</label>
-									<input class="form-control form-control-lg form-control-solid"type="text" name="company_name" :value="old('company_name')"/>
-							</div>
 							<div class="fv-row mb-7">
 								<!--begin::Col-->
 									<label class="form-label fw-bolder text-dark fs-6">First Name</label>

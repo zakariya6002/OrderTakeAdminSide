@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\order\OrderController;
 use App\Http\Controllers\product\ProductController;
 use App\Http\Controllers\category\CategoryController;
@@ -20,6 +21,8 @@ use App\Http\Controllers\customer\CustomerController;
 Route::get('/', function () {
     return view('auth.register');
 });
+
+Route::get('/admin/logout',[AdminController::class,'Logout'])->name('Logout');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('admin.index');
