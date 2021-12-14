@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\customer;
 
 use App\Models\User;
+use App\Models\Customer;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -15,7 +16,7 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        $cus = User::all();
+        $cus = Customer::all();
         return view('admin.customer.index', compact('cus'));
     }
 
@@ -26,7 +27,7 @@ class CustomerController extends Controller
      */
     public function create()
     {
-        $cus = User::all();
+        $cus = Customer::all();
         return view('admin.customer.backend.create', compact('cus'));
     }
 
@@ -38,7 +39,17 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Customer::create([
+                'name'=> $request->name,
+                'email'=> $request->email,
+                'phone'=> $request->phone,
+                'company_name'=> $request->company_name,
+                'address'=> $request->address,
+                'city'=> $request->city,
+                'province'=> $request->province,
+
+        ]);
+        return redirect()->route('customers.index');
     }
 
     /**
@@ -60,7 +71,9 @@ class CustomerController extends Controller
      */
     public function edit($id)
     {
-        //
+        $cus = Customer::find($id);
+
+        return view('customer.backend.edit', compact('cus'));
     }
 
     /**
@@ -72,7 +85,18 @@ class CustomerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $cus = Customer::find($id);
+
+        $cus -> update([
+            'name'=> $request->name,
+            'email'=> $request->email,
+            'phone'=> $request->phone,
+            'company_name'=> $request->company_name,
+            'address'=> $request->address,
+            'city'=> $request->city,
+            'province'=> $request->province,
+        ]);
+        return redirect()->route('customers.index');
     }
 
     /**

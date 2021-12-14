@@ -32,7 +32,7 @@
 <!--end::Head-->
 <!--begin::Body-->
 
-<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed">
+<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed">
     <!--begin::Main-->
     <div class="d-flex flex-column flex-root">
         <!--begin::Root-->
@@ -44,9 +44,9 @@
 
                 @include('admin.body.header')
 
-                <div class="content d-flex flex-column flex-column-fluid mt-15" id="kt_content">
+                <div class="content d-flex flex-column flex-column-fluid mt-20" id="kt_content">
                     <!--begin::Container-->
-                    <div class="container-xxl" id="kt_content_container">@yield('admin')
+                    <div class="container" id="kt_content_container">@yield('admin')
                     </div>
                 </div>
 

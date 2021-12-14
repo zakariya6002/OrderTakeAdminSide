@@ -8,7 +8,8 @@
 										<!--begin::Modal content-->
 										<div class="modal-content">
 											<!--begin::Form-->
-											<form class="form" action="#" id="kt_modal_add_customer_form" data-kt-redirect="#">
+											<form class="form" action="{{route('customers.store')}}" method="post">
+												@csrf
 												<!--begin::Modal header-->
 												<div class="modal-header" id="kt_modal_add_customer_header">
 													<!--begin::Modal title-->
@@ -38,7 +39,7 @@
 															<label class="required fs-6 fw-bold mb-2">Name</label>
 															<!--end::Label-->
 															<!--begin::Input-->
-															<input type="text" class="form-control form-control-solid" placeholder="" name="name" value="Sean Bean" />
+															<input type="text" class="form-control form-control-solid" placeholder="" name="name" value="" />
 															<!--end::Input-->
 														</div>
 														<!--end::Input group-->
@@ -51,19 +52,51 @@
 															</label>
 															<!--end::Label-->
 															<!--begin::Input-->
-															<input type="email" class="form-control form-control-solid" placeholder="" name="email" value="sean@dellito.com" />
+															<input type="email" class="form-control form-control-solid" placeholder="" name="email" value="" />
+															<!--end::Input-->
+														</div>
+														<div class="fv-row mb-7">
+															<!--begin::Label-->
+															<label class="required fs-6 fw-bold mb-2">Phone</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+															<input type="Phone" class="form-control form-control-solid" placeholder="" name="phone" value="" />
+															<!--end::Input-->
+														</div>
+														<div class="fv-row mb-7">
+															<!--begin::Label-->
+															<label class="required fs-6 fw-bold mb-2">Company Name</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+															<input type="text" class="form-control form-control-solid" placeholder="" name="company_name" value="" />
+															<!--end::Input-->
+														</div>
+														<div class="fv-row mb-7">
+															<!--begin::Label-->
+															<label class="required fs-6 fw-bold mb-2">Address</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+															<input type="address" class="form-control form-control-solid" placeholder="" name="address" value="" />
+															<!--end::Input-->
+														</div>
+														<div class="fv-row mb-7">
+															<!--begin::Label-->
+															<label class="required fs-6 fw-bold mb-2">City</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+															<input type="city" class="form-control form-control-solid" placeholder="" name="city" value="" />
+															<!--end::Input-->
+														</div>
+														<div class="fv-row mb-7">
+															<!--begin::Label-->
+															<label class="required fs-6 fw-bold mb-2">Province</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+															<input type="province" class="form-control form-control-solid" placeholder="" name="province" value="" />
 															<!--end::Input-->
 														</div>
 														<!--end::Input group-->
 														<!--begin::Input group-->
-														<div class="fv-row mb-15">
-															<!--begin::Label-->
-															<label class="fs-6 fw-bold mb-2">Description</label>
-															<!--end::Label-->
-															<!--begin::Input-->
-															<input type="text" class="form-control form-control-solid" placeholder="" name="description" />
-															<!--end::Input-->
-														</div>
 														<!--end::Input group-->
 														<!--end::Billing toggle-->
 													</div>
