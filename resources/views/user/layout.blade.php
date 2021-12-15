@@ -16,7 +16,7 @@
     <meta property="og:url" content="https://keenthemes.com/metronic" />
     <meta property="og:site_name" content="Keenthemes | Metronic" />
     <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
-    <link rel="shortcut icon" href="{{asset('backend/media/logos/90fav.png')}}" />
+    <link rel="shortcut icon" href="{{asset('backend/media/logos/svg.png')}}" />
     <!--begin::Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700" />
     <!--end::Fonts-->
@@ -29,31 +29,21 @@
     <link href="{{asset('backend/css/style.bundle.css')}}" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
 </head>
-<!--end::Head-->
-<!--begin::Body-->
 
-<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed">
-    <!--begin::Main-->
+<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed bg-white" style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
     <div class="d-flex flex-column flex-root">
         <!--begin::Root-->
-        <div class="page d-flex flex-row flex-column-fluid">
-            @include('admin.body.aside')
-            <!--begin::Page-->
-            <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
-
-
-                @include('admin.body.header')
-
-                <div class="content d-flex flex-column flex-column-fluid mt-20" id="kt_content">
+        <div class="page d-flex flex-row flex-column-fluid" id="kt_header">
+            <!--beginsidebar-->
+  
                     <!--begin::Container-->
-                    
-                    <div class="container" id="kt_content_container">@yield('admin')
+                    <div class="container" id="kt_content_container">
+                        @yield('admin')
                     </div>
-                </div>
 
-                <!--begin::Javascript-->
-                <!--begin::Global Javascript Bundle(used by all pages)-->
-                @include('admin.body.footer')
+
+
+                </div>
                 <script src="{{asset('plugins/global/plugins.bundle.js')}}"></script>
                 <script src="{{asset('backend/js/scripts.bundle.js')}}"></script>
                 <!--end::Global Javascript Bundle-->

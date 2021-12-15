@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\order\OrderController;
+use App\Http\Controllers\user\UserOrderController;
 use App\Http\Controllers\product\ProductController;
 use App\Http\Controllers\category\CategoryController;
 use App\Http\Controllers\customer\CustomerController;
@@ -23,15 +24,17 @@ Route::get('/', function () {
 });
 
 Route::get('/admin/logout',[AdminController::class,'Logout'])->name('Logout');
+Route::get('/admin',[AdminController::class,'index'])->name('dashboard');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('admin.index');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->get('/makeorder', function () {
+    return view('user.index');
+})->name('makeorder');
 
 Route::resource('orders',OrderController::class);
 Route::resource('customers',CustomerController::class);
 Route::resource('category',CategoryController::class);
 Route::resource('products',ProductController::class);
+Route::resource('placeorder',UserOrderController::class);
 
 
 
