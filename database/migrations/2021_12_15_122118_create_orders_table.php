@@ -15,9 +15,14 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('customer_id')->constrained('customers')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('product_id')->constrained('products')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('user_id')->constrained('users')->onUpdate('cascade')->onDelete('cascade');
+            // $table->unsignedBigInteger('customer_id')->nullable();
+            // $table->foreign('customer_id')->references('id')->on('customers');
+            // $table->unsignedBigInteger('product_id')->nullable();
+            // $table->foreign('product_id')->references('id')->on('products');
+            // $table->unsignedBigInteger('user_id')->nullable();
+            // $table->foreign('user_id')->references('id')->on('users');
+            $table->string('customer_name')->nullable();
+            $table->string('category_name')->nullable();
             $table->integer('quantity');
             $table->datetime('requireddate');
             $table->timestamps();

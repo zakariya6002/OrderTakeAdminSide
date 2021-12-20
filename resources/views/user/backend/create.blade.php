@@ -24,7 +24,7 @@
                 <div class="scroll-y me-n7 pe-7" id="kt_modal_add_customer_scroll" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-max-height="auto" data-kt-scroll-dependencies="#kt_modal_add_customer_header" data-kt-scroll-wrappers="#kt_modal_add_customer_scroll" data-kt-scroll-offset="300px">
                     <!--begin::Input group-->
                     <div class="fv-row mb-7">
-                         <select class="form-control form-control-solid" name="category_id">
+                         <select class="form-control form-control-solid" name="customer_name">
                                         @foreach($cus as $c)
                                         <option value="{{$c->id}}">{{ $c->name}}</option>
                                         @endforeach
